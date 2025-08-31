@@ -1,28 +1,18 @@
 package com.apoptosis.supersteamsystems;
 
+import com.gregtechceu.gtceu.api.GTCEuAPI;
+import com.gregtechceu.gtceu.api.machine.MachineDefinition;
+
+import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+
 import com.apoptosis.supersteamsystems.config.SuperSteamSystemsConfig;
 import com.apoptosis.supersteamsystems.data.SuperSteamSystemsDataGen;
 import com.apoptosis.supersteamsystems.machines.multi.ForgeHammerMultiExample;
 import com.apoptosis.supersteamsystems.registry.SuperSteamSystemsRegistrate;
-import com.gregtechceu.gtceu.api.GTCEuAPI;
-import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialEvent;
-import com.gregtechceu.gtceu.api.data.chemical.material.event.MaterialRegistryEvent;
-import com.gregtechceu.gtceu.api.data.chemical.material.event.PostMaterialEvent;
-import com.gregtechceu.gtceu.api.machine.MachineDefinition;
-import com.gregtechceu.gtceu.api.recipe.GTRecipeType;
-import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
-import com.gregtechceu.gtceu.api.sound.SoundEntry;
-
-import net.minecraft.client.Minecraft;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Items;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -48,7 +38,6 @@ public class SuperSteamSystems {
         SuperSteamSystemsRegistrate.REGISTRATE.registerRegistrate();
     }
 
-
     /**
      * Create a ResourceLocation in the format "modid:path"
      *
@@ -59,8 +48,6 @@ public class SuperSteamSystems {
         return new ResourceLocation(MOD_ID, path);
     }
 
-
-
     /**
      * Used to register your own new machines.
      * Call init() from your Machine class(es) here
@@ -68,9 +55,8 @@ public class SuperSteamSystems {
      * @param event
      */
     private void registerMachines(GTCEuAPI.RegisterEvent<ResourceLocation, MachineDefinition> event) {
-        if(SuperSteamSystemsConfig.INSTANCE.config.registerExampleForgeHammerMulti) {
+        if (SuperSteamSystemsConfig.INSTANCE.config.registerExampleForgeHammerMulti) {
             ForgeHammerMultiExample.init();
         }
     }
-
 }
