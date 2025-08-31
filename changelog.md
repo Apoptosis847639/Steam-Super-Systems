@@ -1,1 +1,1 @@
-Inital Release of the mod.
+Made the mod work properly
