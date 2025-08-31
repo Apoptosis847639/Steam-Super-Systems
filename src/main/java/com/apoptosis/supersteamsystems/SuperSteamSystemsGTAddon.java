@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package com.apoptosis.supersteamsystems;
 
 import com.gregtechceu.gtceu.api.addon.GTAddon;
 import com.gregtechceu.gtceu.api.addon.IGTAddon;
@@ -6,15 +6,18 @@ import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
 
 import net.minecraft.data.recipes.FinishedRecipe;
 
+import com.apoptosis.supersteamsystems.data.recipe.MegaHammerMultiRecipe;
+import com.apoptosis.supersteamsystems.registry.SuperSteamSystemsRegistrate;
+
 import java.util.function.Consumer;
 
 @SuppressWarnings("unused")
 @GTAddon
-public class ExampleGTAddon implements IGTAddon {
+public class SuperSteamSystemsGTAddon implements IGTAddon {
 
     @Override
     public GTRegistrate getRegistrate() {
-        return ExampleMod.EXAMPLE_REGISTRATE;
+        return SuperSteamSystemsRegistrate.REGISTRATE;
     }
 
     @Override
@@ -22,17 +25,12 @@ public class ExampleGTAddon implements IGTAddon {
 
     @Override
     public String addonModId() {
-        return ExampleMod.MOD_ID;
-    }
-
-    @Override
-    public void registerTagPrefixes() {
-        // CustomTagPrefixes.init();
+        return SuperSteamSystems.MOD_ID;
     }
 
     @Override
     public void addRecipes(Consumer<FinishedRecipe> provider) {
-        // CustomRecipes.init(provider);
+        MegaHammerMultiRecipe.init(provider);
     }
 
     // If you have custom ingredient types, uncomment this & change to match your capability.

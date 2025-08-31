@@ -1,4 +1,4 @@
-package com.example.examplemod.mixin;
+package com.apoptosis.supersteamsystems.mixin;
 
 import net.minecraft.world.level.levelgen.WorldgenRandom;
 
