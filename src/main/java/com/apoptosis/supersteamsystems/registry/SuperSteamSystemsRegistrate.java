@@ -1,7 +1,8 @@
 package com.apoptosis.supersteamsystems.registry;
 
-import com.apoptosis.supersteamsystems.SteamSuperSystems;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
+
+import com.apoptosis.supersteamsystems.SteamSuperSystems;
 
 public class SuperSteamSystemsRegistrate {
 
