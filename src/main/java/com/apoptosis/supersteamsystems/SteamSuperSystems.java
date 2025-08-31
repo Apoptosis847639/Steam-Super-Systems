@@ -20,7 +20,7 @@ import org.apache.logging.log4j.Logger;
 @SuppressWarnings("removal")
 public class SteamSuperSystems {
 
-    public static final String MOD_ID = "supersteamsystems";
+    public static final String MOD_ID = "steamsupersystems";
     public static final Logger LOGGER = LogManager.getLogger();
 
     public SteamSuperSystems() {
