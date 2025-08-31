@@ -10,22 +10,22 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 import com.apoptosis.supersteamsystems.config.SuperSteamSystemsConfig;
-import com.apoptosis.supersteamsystems.data.SuperSteamSystemsDataGen;
+import com.apoptosis.supersteamsystems.data.SteamSuperSystemsDataGen;
 import com.apoptosis.supersteamsystems.machines.multi.ForgeHammerMultiExample;
 import com.apoptosis.supersteamsystems.registry.SuperSteamSystemsRegistrate;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-@Mod(SuperSteamSystems.MOD_ID)
+@Mod(SteamSuperSystems.MOD_ID)
 @SuppressWarnings("removal")
-public class SuperSteamSystems {
+public class SteamSuperSystems {
 
     public static final String MOD_ID = "supersteamsystems";
     public static final Logger LOGGER = LogManager.getLogger();
 
-    public SuperSteamSystems() {
+    public SteamSuperSystems() {
         SuperSteamSystemsConfig.init();
-        SuperSteamSystemsDataGen.init();
+        SteamSuperSystemsDataGen.init();
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         modEventBus.addGenericListener(MachineDefinition.class, this::registerMachines);

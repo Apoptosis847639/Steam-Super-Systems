@@ -1,13 +1,13 @@
 package com.apoptosis.supersteamsystems.config;
 
-import com.apoptosis.supersteamsystems.SuperSteamSystems;
+import com.apoptosis.supersteamsystems.SteamSuperSystems;
 import dev.toma.configuration.Configuration;
 import dev.toma.configuration.config.Config;
 import dev.toma.configuration.config.ConfigHolder;
 import dev.toma.configuration.config.Configurable;
 import dev.toma.configuration.config.format.ConfigFormats;
 
-@Config(id = SuperSteamSystems.MOD_ID)
+@Config(id = SteamSuperSystems.MOD_ID)
 public class SuperSteamSystemsConfig {
 
     public static SuperSteamSystemsConfig INSTANCE;

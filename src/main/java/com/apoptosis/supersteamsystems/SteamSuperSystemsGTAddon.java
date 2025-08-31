@@ -13,7 +13,7 @@ import java.util.function.Consumer;
 
 @SuppressWarnings("unused")
 @GTAddon
-public class SuperSteamSystemsGTAddon implements IGTAddon {
+public class SteamSuperSystemsGTAddon implements IGTAddon {
 
     @Override
     public GTRegistrate getRegistrate() {
@@ -25,7 +25,7 @@ public class SuperSteamSystemsGTAddon implements IGTAddon {
 
     @Override
     public String addonModId() {
-        return SuperSteamSystems.MOD_ID;
+        return SteamSuperSystems.MOD_ID;
     }
 
     @Override
