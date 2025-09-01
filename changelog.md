@@ -1,1 +1,1 @@
-Made the mod work properly
+Bundled datagen resources with mod
