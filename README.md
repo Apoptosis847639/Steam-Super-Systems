@@ -7,4 +7,4 @@ recipe types
 
 Moni Labs - Automated Curseforge GitHub action
 
-Steam Additions - Use that to learn how to datagen recipes
+Steam Additions - Used that to learn how to datagen recipes
